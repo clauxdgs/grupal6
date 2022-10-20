@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <title>Registro</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+  <div class="container">
+    <main>
+      <div class="row mt-4">
+        <div class="col">
+          <h1 class="mb-3">Registro</h1>
+          <hr class="my-4">
+          <form class="needs-validation"
+            oninput='pass2.setCustomValidity(pass2.value!= pass1.value?"Las contraseñas no coinciden":"")' novalidate>
+            <div class="form-row">
+              <div class="col-md-12">
+                <label for="validationCustom01">Nombre</label>
+                <input type="text" class="form-control" id="validationCustom01" placeholder="Nombre" value="" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+              <div class="col-md-12">
+                <label for="validationCustom02">Apellido</label>
+                <input type="text" class="form-control" id="validationCustom02" placeholder="Apellido" value=""
+                  required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+              <div class="col-md-12 mb-3">
+                <label for="validationCustomUsername">Nombre de Usuario</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                  </div>
+                  <input type="email" class="form-control" id="validationCustomUsername" placeholder="Nombre De Usuario"
+                    aria-describedby="inputGroupPrepend" required>
+                  <div class="invalid-feedback">
+                    Elige un nombre de Usuario
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+
+              <div class="col-md-6 mb-3">
+                <label for="password1">Constraseña</label>
+                <input type="password" class="form-control" id="password1" placeholder="Password" minlength="6"
+                  name="pass1" required>
+                <div class="invalid-feedback">
+                  Contraseña no valida
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="password2">Repetir Constraseña</label>
+                <input type="password" class="form-control" id="password2" placeholder="Password" name="pass2" required>
+                <div class="invalid-feedback">
+                  la contraseña no coincide
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <button type="button" class="btn btn-link ps-0" data-bs-toggle="modal" data-bs-target="#modalTerminos">
+                Términos del servicio </button>
+              <div class="invalid-feedback" id="feedback-modalterminos">
+                Necesitas aceptar los terminos y condiciones
+              </div>
+            </div>
+
+
+            <br>
+
+            <button class="btn btn-primary" type="submit" onclick="checkeado()">Registrarse</button>
+          </form>
+
+        </div>
+      </div>
+
+
+    </main>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1">Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a
+          Programar</a> - 2022</p>
+      <p class="mb-1">Es un sitio generado con fines estrictamente educativos. No realiza registros ni guarda datos de
+        ningún tipo.</p>
+    </footer>
+  </div>
+  <div class="was-validated">
+    <div class="modal fade " id="modalTerminos" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5">Términos y condiciones del servicio.</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quasi sapiente voluptatum deserunt?
+              Deleniti, adipisci vitae in quaerat eius nemo optio? Quas at magni saepe cumque. Delectus perspiciatis
+              omnis
+              accusamus.</p>
+          </div>
+          <div class="modal-footer">
+            <div class="form-check">
+              <div class="form-check mb-3">
+                <input name="checkterminos" type="checkbox" class="form-check-input" id="validationFormCheck1" required>
+                <label class="form-check-label" for="validationFormCheck1">Acepto los términos y condiciones del
+                  servicio.</label>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/validacion.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+</body>
+
+</html>
